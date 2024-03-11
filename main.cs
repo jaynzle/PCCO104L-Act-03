@@ -9,8 +9,13 @@ class Program {
     {
       Console.WriteLine("Enter something: ");
       input = Console.ReadLine();
-      Console.WriteLine(previousInput + " " + input);
-      previousInput += " " + input;
+
+      if (previousInput != "")
+        Console.WriteLine(previousInput + " " + input);
+      else
+        Console.WriteLine(input);
+
+      previousInput += input;
     }
     while (input != "exit");
 
